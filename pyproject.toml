@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cacoop"
+version = "0.1.0"
+description = "Visual-evidence-guided attribute selection for context optimization"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1", "torchvision", "Pillow", "open_clip_torch==2.24.0"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
